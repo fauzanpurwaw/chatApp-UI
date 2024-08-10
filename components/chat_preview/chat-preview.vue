@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import Popper from 'vue3-popper';
+
+const { onClickFilter } = defineProps<{
+  onClickFilter: any
+}>();
 </script>
 
 <template>
@@ -17,6 +21,7 @@ import Popper from 'vue3-popper';
     <div class="flex items-center gap-1">
       <div
         class="rounded-full hover:bg-slate-100 px-2 flex items-center justify-center duration-200 cursor-pointer"
+        @click="onClickFilter()"
       >
         <Icon
           name="bi:sort-up-alt"

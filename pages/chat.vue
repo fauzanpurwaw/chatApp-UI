@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+import moment from "moment";
 import { dummyDropdownData, dummyChatInfos } from "~/dummy";
 
 const route = useRoute();
 const router = useRouter();
 
 const selectedChannel = ref("");
+const chatInfos = ref(dummyChatInfos);
+const sortByDesc = ref(true);
 
 const onItemSelected = (value: any) => {
   selectedChannel.value = value;
@@ -16,6 +19,32 @@ const onItemSelected = (value: any) => {
     },
   });
 };
+
+const sortData = () => {
+  chatInfos?.value.sort((a: any, b: any) => {
+    if (!sortByDesc.value) {
+      return moment(a?.latestChatDate).diff(moment(b?.latestChatDate));
+    } else if (sortByDesc.value) {
+      return moment(b?.latestChatDate).diff(moment(a?.latestChatDate));
+    } else {
+      throw new Error('Order must be either "asc" or "desc".');
+    }
+  });
+};
+
+const onFilterByName = (value: string) => {
+  console.log("changes");
+  chatInfos.value = dummyChatInfos.filter((i: any) => i?.customerName.toLowerCase().includes(value.toLowerCase()));
+}
+
+const onClickFilter = () => {
+  sortByDesc.value = !sortByDesc.value;
+  sortData();
+};
+
+onMounted(() => {
+  sortData();
+})
 </script>
 
 <template>
@@ -23,7 +52,7 @@ const onItemSelected = (value: any) => {
     <div class="container">
       <CategoryMenu />
       <div class="filter-group">
-        <SearchFilter class="" />
+        <SearchFilter class="" :on-change-value="onFilterByName"/>
         <Dropdown
           :selected="selectedChannel"
           :data="dummyDropdownData"
@@ -38,10 +67,9 @@ const onItemSelected = (value: any) => {
           class="md:flex-[2] md:flex md:visible invisible h-full md:max-w-[300px] max-h-full duration-500"
         >
           <div class="flex flex-col w-full h-full">
-            <ChatPreview />
+            <ChatPreview :on-click-filter="onClickFilter" />
             <div class="overflow-auto md:h-[69dvh] h-[78dvh] mb-2 hide-track">
-              <ChatPreviewItem :data="dummyChatInfos" />
-              <ChatPreviewItem :data="dummyChatInfos" />
+              <ChatPreviewItem :data="chatInfos" />
             </div>
           </div>
         </div>

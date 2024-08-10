@@ -177,48 +177,48 @@ export const dummyChatInfos: ChatInfo[] = [
       }
     ]
   },
-  // {
-  //   chatId: 107,
-  //   customerId: 7,
-  //   customerName: "Mia Thompson",
-  //   activeSalesId: 207,
-  //   activeSalesName: "Ethan Harris",
-  //   latestChatDate: "2024-08-15T16:00:00Z",
-  //   conversations: [
-  //     {
-  //       text: "I'm interested in setting up a long-term contract.",
-  //       sendTime: "2024-08-15T15:30:00Z",
-  //       isUnread: false,
-  //       sentFrom: "Customer"
-  //     },
-  //     {
-  //       text: "That's great! Let's schedule a call to discuss the details.",
-  //       sendTime: "2024-08-15T15:45:00Z",
-  //       isUnread: true,
-  //       sentFrom: "Sales"
-  //     }
-  //   ]
-  // },
-  // {
-  //   chatId: 108,
-  //   customerId: 8,
-  //   customerName: "Isabella Moore",
-  //   activeSalesId: 208,
-  //   activeSalesName: "James Walker",
-  //   latestChatDate: "2024-08-16T18:20:00Z",
-  //   conversations: [
-  //     {
-  //       text: "Can you help me with a product return?",
-  //       sendTime: "2024-08-16T18:00:00Z",
-  //       isUnread: false,
-  //       sentFrom: "Customer"
-  //     },
-  //     {
-  //       text: "Certainly! I'll guide you through the process.",
-  //       sendTime: "2024-08-16T18:10:00Z",
-  //       isUnread: true,
-  //       sentFrom: "Sales"
-  //     }
-  //   ]
-  // }
+  {
+    chatId: 107,
+    customerId: 7,
+    customerName: "Mia Thompson",
+    activeSalesId: 207,
+    activeSalesName: "Ethan Harris",
+    latestChatDate: "2024-08-15T16:00:00Z",
+    conversations: [
+      {
+        text: "I'm interested in setting up a long-term contract.",
+        sendTime: "2024-08-15T15:30:00Z",
+        isUnread: false,
+        sentFrom: "Customer"
+      },
+      {
+        text: "That's great! Let's schedule a call to discuss the details.",
+        sendTime: "2024-08-15T15:45:00Z",
+        isUnread: true,
+        sentFrom: "Sales"
+      }
+    ]
+  },
+  {
+    chatId: 108,
+    customerId: 8,
+    customerName: "Isabella Moore",
+    activeSalesId: 208,
+    activeSalesName: "James Walker",
+    latestChatDate: "2024-08-16T18:20:00Z",
+    conversations: [
+      {
+        text: "Can you help me with a product return?",
+        sendTime: "2024-08-16T18:00:00Z",
+        isUnread: false,
+        sentFrom: "Customer"
+      },
+      {
+        text: "Certainly! I'll guide you through the process.",
+        sendTime: "2024-08-16T18:10:00Z",
+        isUnread: true,
+        sentFrom: "Sales"
+      }
+    ]
+  }
 ];
