@@ -10,18 +10,23 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.24.7",
+    "@babel/runtime": "^7.25.0",
     "@nuxt/icon": "^1.4.5",
     "@pinia/nuxt": "^0.5.3",
     "@quasar/extras": "^1.16.12",
+    "corejs": "^1.0.0",
     "moment": "^2.30.1",
     "nuxt": "^3.12.4",
     "pinia": "^2.2.1",
     "quasar": "^2.16.8",
+    "regenerator-runtime": "^0.14.1",
     "vue": "latest",
     "vue3-popper": "^1.5.0"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
   "devDependencies": {
+    "@babel/preset-env": "^7.25.3",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.9"
