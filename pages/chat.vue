@@ -95,7 +95,7 @@ onMounted(() => {
           <div class="flex flex-col w-full h-full duration-300">
             <ChatPreviewHeader :on-click-filter="onClickFilter" />
             <div
-              class="overflow-auto lg:h-[68dvh] h-[77dvh] mb-2 hide-track duration-300"
+              class="overflow-auto lg:h-[68dvh] h-[75dvh] mb-2 hide-track duration-300"
             >
               <ChatPreview :data="chatInfos" :on-click-item="setOpenedChat" />
             </div>
@@ -117,12 +117,12 @@ onMounted(() => {
               "
             />
             <div
-              class="overflow-auto lg:h-[56dvh] h-[65dvh] bg-[#f9fafe] hide-track"
+              class="overflow-auto lg:h-[56dvh] h-[69dvh] bg-[#f9fafe] hide-track"
               ref="containerEl"
             >
               <ChatContent />
               <div
-                class="font-semibold italic text-[8px] md:text-[12px] flex w-full justify-center pt-3 py-5"
+                class="font-semibold italic text-[9px] md:text-[12px] flex w-full justify-center pt-3 py-5"
               >
                 <span class="text-green-600">Status Percakapan Open</span>
                 , Tipe Percakapan
@@ -136,13 +136,14 @@ onMounted(() => {
         </div>
         <!-- break -->
         <div
-          class="overflow-auto lg:h-[77dvh] h-[80dvh] mb-2 hide-track duration-300 lg:!max-w-[320px] w-full"
+          class="lg:!flex h-full lg:max-w-[320px] max-h-full w-full duration-300"
+          :class="{ '!flex': openedChat?.conversations.length !== 0 && onEdit }"
           v-if="openedChat?.conversations.length !== 0 && onEdit"
         >
           <div class="flex flex-col w-full h-full duration-300">
             <SettingsSettingHeader :on-click="() => (onEdit = !onEdit)" />
             <div
-              class="overflow-auto lg:h-[68dvh] h-[77dvh] mb-2 hide-track duration-300"
+              class="overflow-auto lg:h-[68dvh] h-[80dvh] mb-2 hide-track duration-300"
             >
               <SettingsSettingContent />
             </div>
