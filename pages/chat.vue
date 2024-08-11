@@ -88,21 +88,19 @@ onMounted(() => {
     <div class="border rounded bg-white m-0 h-full duration-300">
       <div class="flex w-full h-full duration-500">
         <!-- break -->
-        <Transition>
-          <div
-            class="lg:!flex hidden h-full lg:max-w-[300px] max-h-full w-full duration-300"
-            :class="{ '!flex': openedChat?.conversations.length === 0 }"
-          >
-            <div class="flex flex-col w-full h-full duration-300">
-              <ChatPreviewHeader :on-click-filter="onClickFilter" />
-              <div
-                class="overflow-auto lg:h-[68dvh] h-[77dvh] mb-2 hide-track duration-300"
-              >
-                <ChatPreview :data="chatInfos" :on-click-item="setOpenedChat" />
-              </div>
+        <div
+          class="lg:!flex hidden h-full lg:max-w-[300px] max-h-full w-full duration-300"
+          :class="{ '!flex': openedChat?.conversations.length === 0 }"
+        >
+          <div class="flex flex-col w-full h-full duration-300">
+            <ChatPreviewHeader :on-click-filter="onClickFilter" />
+            <div
+              class="overflow-auto lg:h-[68dvh] h-[77dvh] mb-2 hide-track duration-300"
+            >
+              <ChatPreview :data="chatInfos" :on-click-item="setOpenedChat" />
             </div>
           </div>
-        </Transition>
+        </div>
         <!-- break -->
         <div
           class="flex-[2] lg:!flex h-full duration-300 border-r"
@@ -137,21 +135,19 @@ onMounted(() => {
           </div>
         </div>
         <!-- break -->
-        <Transition>
-          <div
-            class="overflow-auto lg:h-[77dvh] h-[80dvh] mb-2 hide-track duration-300 lg:!max-w-[320px] w-full"
-            v-if="openedChat?.conversations.length !== 0 && onEdit"
-          >
-            <div class="flex flex-col w-full h-full duration-300">
-              <SettingsSettingHeader :on-click="() => (onEdit = !onEdit)" />
-              <div
-                class="overflow-auto lg:h-[68dvh] h-[77dvh] mb-2 hide-track duration-300"
-              >
-                <SettingsSettingContent />
-              </div>
+        <div
+          class="overflow-auto lg:h-[77dvh] h-[80dvh] mb-2 hide-track duration-300 lg:!max-w-[320px] w-full"
+          v-if="openedChat?.conversations.length !== 0 && onEdit"
+        >
+          <div class="flex flex-col w-full h-full duration-300">
+            <SettingsSettingHeader :on-click="() => (onEdit = !onEdit)" />
+            <div
+              class="overflow-auto lg:h-[68dvh] h-[77dvh] mb-2 hide-track duration-300"
+            >
+              <SettingsSettingContent />
             </div>
           </div>
-        </Transition>
+        </div>
         <div
           class="lg:flex-1 lg:flex hidden h-full w-full duration-300"
           v-if="openedChat?.conversations.length === 0"
