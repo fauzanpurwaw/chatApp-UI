@@ -2,17 +2,22 @@
 import moment from 'moment';
 import type { ChatInfo } from '~/interface';
 
-const {} = defineProps<{
+const { openedChat } = storeToRefs(useGeneralStore());
+
+const { data, onClickItem  } = defineProps<{
   data: ChatInfo[],
+  onClickItem: any,
 }>();
 </script>
 
 <template>
-  <div class="md:flex hidden border-b" v-for="item in data">
+  <div class="md:!flex flex border-b duration-300" v-for="item in data" @click="onClickItem(item)"
+    :class="{ 'hidden': openedChat?.conversations.length !== 0  }"
+  >
     <div
-      class="flex w-full px-3 text-sm py-2 hover:bg-slate-100 group cursor-pointer"
+      class="flex w-full px-3 text-sm py-2 hover:bg-slate-100 group cursor-pointer duration-300"
     >
-      <div class="flex justify-between w-full h-fit ">
+      <div class="flex justify-between w-full h-fit duration-300">
         <div class="flex-[2] nowrap">
           <div class="nowrap font-semibold text-slate-800">
             {{ item?.customerName }}

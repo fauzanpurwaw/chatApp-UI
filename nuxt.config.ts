@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         storesDirs: ["./stores/**", "./stores/account/**"],
         autoImports: ['defineStore'],
       }
-    ], "@nuxt/icon"],
+    ], "@nuxt/icon", "@vueuse/nuxt",],
   imports: {
     dirs: ['./stores'],
   },

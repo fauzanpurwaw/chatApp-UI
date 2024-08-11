@@ -15,6 +15,7 @@
     "@nuxt/icon": "^1.4.5",
     "@pinia/nuxt": "^0.5.3",
     "@quasar/extras": "^1.16.12",
+    "@vuepic/vue-datepicker": "^9.0.1",
     "corejs": "^1.0.0",
     "moment": "^2.30.1",
     "nuxt": "^3.12.4",
@@ -27,6 +28,8 @@
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
   "devDependencies": {
     "@babel/preset-env": "^7.25.3",
+    "@vueuse/core": "^10.11.1",
+    "@vueuse/nuxt": "^10.11.1",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.9"

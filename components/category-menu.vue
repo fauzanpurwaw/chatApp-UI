@@ -18,18 +18,18 @@ const onClick = (name: string) => {
 
 <template>
   <div
-    class="rounded border justify-center items-center max-h-9 p-2 cursor-pointer flex md:hidden bg-white duration-300"
+    class="rounded border justify-center items-center max-h-9 p-2 cursor-pointer flex lg:hidden bg-white duration-300"
     @click="() => (toggleMenuCategory = !toggleMenuCategory)"
   >
     <Icon name="material-symbols:tab-group" size="20" class="bg-slate-500" />
     <div class="red-dot relative -top-2 -left-1 -mr-1"></div>
   </div>
   <div
-    class="menu md:flex md:relative md:ml-0 md:bg-inherit bg-white ml-12 absolute z-50"
+    class="menu lg:flex lg:relative lg:ml-0 lg:bg-inherit bg-white ml-12 absolute z-50"
     :class="{ hidden: toggleMenuCategory }"
   >
     <div
-      class="fixed top-0 right-0 h-screen w-screen -z-[1] md:hidden"
+      class="fixed top-0 right-0 h-screen w-screen -z-[1] lg:hidden"
       @click="() => (toggleMenuCategory = !toggleMenuCategory)"
     ></div>
     <div

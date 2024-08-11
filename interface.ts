@@ -21,6 +21,7 @@ export interface ChatInfo {
   chatId: number;
   customerId: number;
   customerName: string;
+  customerPhoneNum: string;
   activeSalesId: number;
   activeSalesName: string;
   latestChatDate: string;
