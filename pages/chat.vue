@@ -95,7 +95,7 @@ onMounted(() => {
           <div class="flex flex-col w-full h-full duration-300">
             <ChatPreviewHeader :on-click-filter="onClickFilter" />
             <div
-              class="overflow-auto lg:h-[68dvh] h-[75dvh] mb-2 hide-track duration-300"
+              class="overflow-auto lg:h-[68dvh] h-[73dvh] mb-2 hide-track duration-300"
             >
               <ChatPreview :data="chatInfos" :on-click-item="setOpenedChat" />
             </div>
@@ -117,7 +117,7 @@ onMounted(() => {
               "
             />
             <div
-              class="overflow-auto lg:h-[56dvh] h-[69dvh] bg-[#f9fafe] hide-track"
+              class="overflow-auto lg:h-[56dvh] h-[67dvh] bg-[#f9fafe] hide-track"
               ref="containerEl"
             >
               <ChatContent />
@@ -143,7 +143,7 @@ onMounted(() => {
           <div class="flex flex-col w-full h-full duration-300">
             <SettingsSettingHeader :on-click="() => (onEdit = !onEdit)" />
             <div
-              class="overflow-auto lg:h-[68dvh] h-[80dvh] mb-2 hide-track duration-300"
+              class="overflow-auto lg:h-[68dvh] h-[77dvh] mb-2 hide-track duration-300"
             >
               <SettingsSettingContent />
             </div>
