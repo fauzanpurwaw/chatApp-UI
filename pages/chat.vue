@@ -143,7 +143,7 @@ onMounted(() => {
           <div class="flex flex-col w-full h-full duration-300">
             <SettingsSettingHeader :on-click="() => (onEdit = !onEdit)" />
             <div
-              class="overflow-auto lg:h-[68dvh] h-[77dvh] mb-2 hide-track duration-300"
+              class="overflow-auto lg:h-[68dvh] h-[78dvh] mb-2 hide-track duration-300"
             >
               <SettingsSettingContent />
             </div>
