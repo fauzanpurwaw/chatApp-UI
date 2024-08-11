@@ -122,7 +122,7 @@ onMounted(() => {
             >
               <ChatContent />
               <div
-                class="font-semibold italic text-[12px] flex w-full justify-center pt-3 py-5"
+                class="font-semibold italic sm:text-[8px] text-[12px] flex w-full justify-center pt-3 py-5"
               >
                 <span class="text-green-600">Status Percakapan Open</span>
                 , Tipe Percakapan
