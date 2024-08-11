@@ -11,7 +11,7 @@ const date = ref(null);
     <div
       class="flex gap-2 items-center h-9 bg-blue-600 text-white text-[12px] px-3 rounded cursor-pointer"
     >
-      <VueDatePicker v-model="date" range>
+      <VueDatePicker v-model="date" range position="right">
         <template #trigger>
           <div class="flex justify-center items-center gap-2">
             <Icon name="bx:filter-alt" size="16" />

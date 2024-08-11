@@ -10,7 +10,7 @@ const { openedChat } = storeToRefs(useGeneralStore());
 </script>
 
 <template>
-  <div class="flex h-full" v-for="conversation in openedChat?.conversations">
+  <div class="flex" v-for="conversation in openedChat?.conversations">
     <div
       class="flex flex-col w-full px-3 text-sm py-1 hover:bg-slate-100 group"
       :class="{
