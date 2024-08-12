@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import moment from "moment";
 
+const { openedChat } = storeToRefs(useGeneralStore());
 const { pushNewChat } = useGeneralStore();
 
 const newChat = ref({
@@ -14,7 +15,7 @@ const newChat = ref({
 <template>
   <div class="flex flex-col gap-2 p-2 text-[12px] h-[12vh] border-t px-5">
     <div class="font-semibold italic text-[12px] ml-1">
-      sales aktif : <span class="text-green-600">Yaya Jujura</span>
+      sales aktif : <span class="text-green-600">{{ openedChat.activeSalesName }}</span>
       <span class="underline text-blue-600 ml-1 cursor-pointer"
         >Ganti Sales Aktif</span
       >
