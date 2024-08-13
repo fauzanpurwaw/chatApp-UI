@@ -13,7 +13,7 @@ const { onClickEdit } = defineProps<{
       <Icon
         name="octicon:chevron-left-24"
         size="20"
-        class="bg-slate-700 md:hidden inline-block"
+        class="bg-slate-700 lg:hidden inline-block"
         @click="clearOpenedChat()"
       />
       <div class="flex flex-col items-start justify-start">
