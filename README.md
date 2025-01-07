@@ -1,4 +1,4 @@
-# UI Copy Dari Aplikasi CRM Jujura
+# UI Copy Dari Aplikasi CRM 
 
 Aplikasi ini saya buat untuk kebutuhan test user
 
