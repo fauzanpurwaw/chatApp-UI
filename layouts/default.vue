@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   useHead({
-    title: "Jujura | CRM"
+    title: "Demo | CRM"
   });
 </script>
 
